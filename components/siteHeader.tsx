@@ -5,6 +5,7 @@ import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { Icons } from './icons';
 import { MainNav } from './mainNav';
+import { MobileNav } from './mobileNav';
 import { buttonVariants } from './ui/button';
 
 export function SiteHeader() {
@@ -22,7 +23,7 @@ export function SiteHeader() {
               <div
                 className={cn(
                   buttonVariants({ variant: 'ghost' }),
-                  'w-10 px-0'
+                  'w-10 px-0 hidden sm:inline-flex'
                 )}
               >
                 <Icons.gitHub className='h-4 w-4' />
@@ -37,13 +38,14 @@ export function SiteHeader() {
               <div
                 className={cn(
                   buttonVariants({ variant: 'ghost' }),
-                  'w-10 px-0'
+                  'w-10 px-0 hidden sm:inline-flex'
                 )}
               >
                 <Icons.twitter className='h-4 w-4' />
                 <span className='sr-only'>Twitter</span>
               </div>
             </Link>
+            <MobileNav />
           </nav>
         </div>
       </div>
