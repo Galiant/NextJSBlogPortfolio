@@ -1,3 +1,4 @@
+import { Providers } from '@/components/providers';
 import { SiteHeader } from '@/components/siteHeader';
 import { cn } from '@/lib/utils';
 import type { Metadata } from 'next';
@@ -24,10 +25,12 @@ export default function RootLayout({
           inter.variable
         )}
       >
-        <div className='relative flex min-h-dvh flex-col bg-background'>
-          <SiteHeader />
-          <main className='flex-1'>{children}</main>
-        </div>
+        <Providers>
+          <div className='relative flex min-h-dvh flex-col bg-background'>
+            <SiteHeader />
+            <main className='flex-1'>{children}</main>
+          </div>
+        </Providers>
       </body>
     </html>
   );

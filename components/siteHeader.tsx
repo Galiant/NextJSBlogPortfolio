@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { Icons } from './icons';
 import { MainNav } from './mainNav';
 import { MobileNav } from './mobileNav';
+import { ModeToggle } from './modeToggle';
 import { buttonVariants } from './ui/button';
 
 export function SiteHeader() {
@@ -45,6 +46,7 @@ export function SiteHeader() {
                 <span className='sr-only'>Twitter</span>
               </div>
             </Link>
+            <ModeToggle />
             <MobileNav />
           </nav>
         </div>
