@@ -1,5 +1,11 @@
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { siteConfig } from '@/config/site';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About Me | Antonijo Galic',
+  description: 'Information about me',
+};
 
 export default async function AboutPage() {
   return (

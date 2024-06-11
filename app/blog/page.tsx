@@ -2,6 +2,7 @@ import { posts } from '#site/content';
 import { PostItem } from '@/components/postItem';
 import { QueryPagination } from '@/components/queryPagination';
 import { sortPosts } from '@/lib/utils';
+import { Metadata } from 'next';
 
 interface BlogPageProps {
   searchParams: {
@@ -10,6 +11,11 @@ interface BlogPageProps {
 }
 
 const POSTS_PER_PAGE = 5;
+
+export const metadata: Metadata = {
+  title: 'Blog | Antonijo Galic',
+  description: 'This is my digital corner for all things dev',
+};
 
 export default async function BlogPage({ searchParams }: BlogPageProps) {
   const currentPage = Number(searchParams?.page) || 1;
