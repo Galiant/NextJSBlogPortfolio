@@ -1,5 +1,6 @@
 import { posts } from '#site/content';
 import { MDXContent } from '@/components/mdxComponents';
+import { Tag } from '@/components/tag';
 import { siteConfig } from '@/config/site';
 import '@/styles/mdx.css';
 import { Metadata } from 'next';
@@ -75,6 +76,11 @@ export default async function PostPage({ params }: PostPageProps) {
       {post.description ? (
         <p className='text-xl mt-0 text-muted-foreground'>{post.description}</p>
       ) : null}
+      <div className='flex gap-2 mb-2'>
+        {post.tags?.map(tag => (
+          <Tag tag={tag} key={tag} />
+        ))}
+      </div>
       <hr className='my-4' />
       <MDXContent code={post.body} />
     </article>

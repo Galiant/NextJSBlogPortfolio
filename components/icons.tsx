@@ -12,9 +12,7 @@ export const Icons = {
       strokeLinejoin='round'
       {...props}
     >
-      <path d='M4 11a9 9 0 0 1 9 9' />
-      <path d='M4 4a16 16 0 0 1 16 16' />
-      <circle cx='5' cy='19' r='1' />
+      <rect cx='42' cy='42' width='24' height='24' fill='black'></rect>
     </svg>
   ),
   twitter: (props: IconProps) => (
