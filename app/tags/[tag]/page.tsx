@@ -51,7 +51,7 @@ export default function TagPage({ params }: TagPageProps) {
         </div>
       </div>
       <div className='grid grid-cols-12 gap-3 mt-8'>
-        <div className='col-span-12 col-start-1 sm:col-span-8'>
+        <div className='col-span-12 col-start-1'>
           <hr />
           {displayPosts?.length > 0 ? (
             <ul className='flex flex-col'>
@@ -74,7 +74,7 @@ export default function TagPage({ params }: TagPageProps) {
             <p>Nothing to see here yet</p>
           )}
         </div>
-        <Card className='col-span-12 row-start-3 h-fit sm:col-span-4 sm:col-start-9 sm:row-start-1'>
+        <Card className='col-span-12 row-start-3 h-fit'>
           <CardHeader>
             <CardTitle>Tags</CardTitle>
           </CardHeader>
