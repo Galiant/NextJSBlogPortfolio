@@ -1,4 +1,4 @@
-import { Post } from '#site/content';
+import { Notes, Post } from '#site/content';
 import { clsx, type ClassValue } from 'clsx';
 import { slug } from 'github-slugger';
 import { twMerge } from 'tailwind-merge';
@@ -17,7 +17,7 @@ export function formatDate(input: string | number): string {
   });
 }
 
-export function sortPosts(posts: Array<Post>) {
+export function sortPosts(posts: Array<Post & Notes>) {
   return posts.sort((a, b) => {
     if (a.date > b.date) return -1;
     if (a.date < b.date) return 1;
@@ -25,7 +25,7 @@ export function sortPosts(posts: Array<Post>) {
   });
 }
 
-export function getAllTags(posts: Array<Post>) {
+export function getAllTags(posts: Array<Post & Notes>) {
   const tags: Record<string, number> = {};
   posts.forEach(post => {
     if (post.published) {
@@ -42,7 +42,7 @@ export function sortTagsByCount(tags: Record<string, number>) {
   return Object.keys(tags).sort((a, b) => tags[b] - tags[a]);
 }
 
-export function getPostsByTagSlug(posts: Array<Post>, tag: string) {
+export function getPostsByTagSlug(posts: Array<Post & Notes>, tag: string) {
   return posts.filter(post => {
     if (!post.tags) return false;
     const slugifiedTags = post.tags.map(tag => slug(tag));

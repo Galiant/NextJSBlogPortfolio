@@ -1,4 +1,4 @@
-import { posts } from '#site/content';
+import { notes, posts } from '#site/content';
 import { Tag } from '@/components/tag';
 import { getAllTags, sortTagsByCount } from '@/lib/utils';
 import { Metadata } from 'next';
@@ -9,7 +9,10 @@ export const metadata: Metadata = {
 };
 
 export default async function TagsPage() {
-  const tags = getAllTags(posts);
+  const isBlogPage = document.location.pathname === '/blog';
+  console.log('IS BLOG', isBlogPage);
+  // const allContent = [...posts, ...notes];
+  const tags = isBlogPage ? getAllTags(posts) : getAllTags(notes);
   const sortedTags = sortTagsByCount(tags);
 
   return (
