@@ -1,4 +1,5 @@
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { WorkExperience } from '@/components/workExperience';
 import { siteConfig } from '@/config/site';
 import { Metadata } from 'next';
 
@@ -9,12 +10,13 @@ export const metadata: Metadata = {
 
 export default async function AboutPage() {
   return (
-    <div className='container max-w-6xl py-6 lg:py-10'>
+    <div className='container max-w-4xl py-6 lg:py-10'>
       <div className='flex flex-col items-start gap-4 md:flex-row md:justify-between md:gap-8'>
-        <div className='flex-1 space-x-4'>
+        <div className='flex-1 space-y-4'>
           <h1 className='inline-block font-black text-4xl lg:text-5xl'>
             About me
           </h1>
+          <p className='text-xl text-muted-foreground'>Find more about me</p>
         </div>
       </div>
       <hr className='my-8' />
@@ -28,10 +30,10 @@ export default async function AboutPage() {
             {siteConfig.author}
           </h2>
           <p className='text-muted-foreground text-center break-words'>
-            Software Developer
+            Fullstack Software Developer
           </p>
         </div>
-        <p className='text-muted-foreground text-lg py-4'>
+        <p className='text-lg py-4 leading-8'>
           <span className='font-bold'>Hello there!</span> My name is Antonijo,
           and I’m thrilled to welcome you to my corner of the digital world. As
           a devoted husband and father, family is at the heart of everything I
@@ -42,6 +44,22 @@ export default async function AboutPage() {
           skills. Join me on this journey as we unravel the mysteries of
           technology and delve into the endless possibilities it offers.
         </p>
+      </div>
+      <div>
+        <div className='flex-1'>
+          <h2 className='inline-block font-black text-3xl lg:text-4xl mt-12'>
+            Recent experience
+          </h2>
+          {siteConfig.workExperience.map(workExperience => (
+            <WorkExperience
+              timeInterval={workExperience.timeInterval}
+              position={workExperience.position}
+              company={workExperience.company}
+              description={workExperience.description}
+              key={workExperience.timeInterval}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
