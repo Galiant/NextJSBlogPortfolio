@@ -1,4 +1,4 @@
-import { posts } from '#site/content';
+import { notes, posts } from '#site/content';
 import { PostItem } from '@/components/postItem';
 import { QueryPagination } from '@/components/queryPagination';
 import { Tag } from '@/components/tag';
@@ -31,8 +31,8 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
     POSTS_PER_PAGE * currentPage
   );
 
-  // const allContent = [...posts, ...notes];
-  const tags = getAllTags(posts);
+  const allContent = [...posts, ...notes];
+  const tags = getAllTags(allContent);
 
   const sortedTags = sortTagsByCount(tags);
 
