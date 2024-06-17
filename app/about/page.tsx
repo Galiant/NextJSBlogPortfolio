@@ -33,7 +33,7 @@ export default async function AboutPage() {
             Fullstack Software Developer
           </p>
         </div>
-        <p className='text-lg py-4 leading-8'>
+        <p className='text-lg pb-4 leading-8'>
           <span className='font-bold'>Hello there!</span> My name is Antonijo,
           and I’m thrilled to welcome you to my corner of the digital world. As
           a devoted husband and father, family is at the heart of everything I

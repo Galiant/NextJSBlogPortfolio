@@ -1,10 +1,10 @@
 'use client';
 
 import { siteConfig } from '@/config/site';
-import { Menu } from 'lucide-react';
 import Link, { LinkProps } from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
+import { FiMenu } from 'react-icons/fi';
 import { Icons } from './icons';
 import { Button } from './ui/button';
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
@@ -22,7 +22,7 @@ export function MobileNav() {
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
         <Button variant='outline' className='w-10 px-0 sm:hidden'>
-          <Menu className='h-5 w-5' />
+          <FiMenu size={20} />
           <span className='sr-only'>Toggle Menu</span>
         </Button>
       </SheetTrigger>

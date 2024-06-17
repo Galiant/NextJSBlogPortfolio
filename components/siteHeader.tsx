@@ -3,7 +3,7 @@
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
-import { Icons } from './icons';
+import { FaGithub, FaLinkedinIn, FaXTwitter } from 'react-icons/fa6';
 import { MainNav } from './mainNav';
 import { MobileNav } from './mobileNav';
 import { ModeToggle } from './modeToggle';
@@ -17,6 +17,21 @@ export function SiteHeader() {
         <div className='flex flex-1 items-center justify-end space-x-2'>
           <nav className='flex items-center'>
             <Link
+              href={siteConfig.links.linkedin}
+              target='_blank'
+              rel='noreferrer'
+            >
+              <div
+                className={cn(
+                  buttonVariants({ variant: 'ghost' }),
+                  'w-10 px-0 hidden sm:inline-flex'
+                )}
+              >
+                <FaLinkedinIn size={20} />
+                <span className='sr-only'>LinkedIn</span>
+              </div>
+            </Link>
+            <Link
               href={siteConfig.links.github}
               target='_blank'
               rel='noreferrer'
@@ -27,7 +42,7 @@ export function SiteHeader() {
                   'w-10 px-0 hidden sm:inline-flex'
                 )}
               >
-                <Icons.gitHub className='h-4 w-4' />
+                <FaGithub size={20} />
                 <span className='sr-only'>Github</span>
               </div>
             </Link>
@@ -42,7 +57,7 @@ export function SiteHeader() {
                   'w-10 px-0 hidden sm:inline-flex'
                 )}
               >
-                <Icons.twitter className='h-4 w-4' />
+                <FaXTwitter size={20} />
                 <span className='sr-only'>Twitter</span>
               </div>
             </Link>

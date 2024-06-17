@@ -1,6 +1,6 @@
 import { cn, formatDate } from '@/lib/utils';
-import { Calendar } from 'lucide-react';
 import Link from 'next/link';
+import { FaRegCalendar } from 'react-icons/fa6';
 import { Tag } from './tag';
 import { buttonVariants } from './ui/button';
 
@@ -35,8 +35,8 @@ export function PostItem({
       <div className='flex justify-between items-center'>
         <dl>
           <dt className='sr-only'>Published On</dt>
-          <dd className='text-sm sm:text-base font-medium flex items-center gap-1'>
-            <Calendar className='h-4 w-4' />
+          <dd className='text-sm sm:text-base font-medium flex items-center gap-2'>
+            <FaRegCalendar size={18} />
             <time dateTime={date}>{formatDate(date)}</time>
           </dd>
         </dl>
