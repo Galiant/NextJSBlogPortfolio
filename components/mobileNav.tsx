@@ -39,11 +39,11 @@ export function MobileNav() {
           <MobileLink onOpenChange={setOpen} href='/blog'>
             Blog
           </MobileLink>
-          <MobileLink onOpenChange={setOpen} href='/about'>
-            About
-          </MobileLink>
           <MobileLink onOpenChange={setOpen} href='/notes'>
             Notes
+          </MobileLink>
+          <MobileLink onOpenChange={setOpen} href='/about'>
+            About
           </MobileLink>
           <Link target='_blank' rel='noreferrer' href={siteConfig.links.github}>
             Github

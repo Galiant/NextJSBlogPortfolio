@@ -14,7 +14,7 @@ export function Tag({ tag, current, count }: TagProps) {
       className={badgeVariants({
         variant: current ? 'default' : 'secondary',
         className:
-          'no-underline rounded-md hover:bg-secondary-foreground hover:text-primary-foreground dark:hover:text-primary-foreground',
+          'no-underline rounded-md hover:text-primary-foreground hover:bg-primary dark:hover:text-primary-foreground dark:hover:bg-secondary-foreground',
       })}
       href={`/tags/${slug(tag)}`}
     >
