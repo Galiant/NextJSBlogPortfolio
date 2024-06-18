@@ -9,10 +9,8 @@ export const metadata: Metadata = {
 };
 
 export default async function TagsPage() {
-  const isBlogPage = document.location.pathname === '/blog';
-  console.log('IS BLOG', isBlogPage);
-  // const allContent = [...posts, ...notes];
-  const tags = isBlogPage ? getAllTags(posts) : getAllTags(notes);
+  const allContent = [...posts, ...notes];
+  const tags = getAllTags(allContent);
   const sortedTags = sortTagsByCount(tags);
 
   return (

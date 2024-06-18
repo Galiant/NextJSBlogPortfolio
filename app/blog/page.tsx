@@ -1,9 +1,8 @@
 import { notes, posts } from '#site/content';
 import { PostItem } from '@/components/postItem';
 import { QueryPagination } from '@/components/queryPagination';
-import { Tag } from '@/components/tag';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { getAllTags, sortPosts, sortTagsByCount } from '@/lib/utils';
+import { TagsCard } from '@/components/tagsCard';
+import { getAllTags, sortPosts } from '@/lib/utils';
 import { Metadata } from 'next';
 
 interface BlogPageProps {
@@ -33,8 +32,6 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
 
   const allContent = [...posts, ...notes];
   const tags = getAllTags(allContent);
-
-  const sortedTags = sortTagsByCount(tags);
 
   return (
     <div className='container max-w-4xl py-6 lg:py-10'>
@@ -74,16 +71,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
             className='justify-end mt-4'
           />
         </div>
-        <Card className='col-span-12 row-start-3 h-fit'>
-          <CardHeader>
-            <CardTitle>Tags</CardTitle>
-          </CardHeader>
-          <CardContent className='flex flex-wrap gap-2'>
-            {sortedTags?.map(tag => (
-              <Tag tag={tag} key={tag} count={tags[tag]} />
-            ))}
-          </CardContent>
-        </Card>
+        <TagsCard tags={tags} />
       </div>
     </div>
   );
