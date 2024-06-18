@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { FaGithub, FaLinkedinIn, FaXTwitter } from 'react-icons/fa6';
 import { MainNav } from './mainNav';
 import { MobileNav } from './mobileNav';
-import { ModeToggle } from './modeToggle';
+import { SelectTheme } from './selectTheme';
 import { buttonVariants } from './ui/button';
 
 export function SiteHeader() {
@@ -61,7 +61,7 @@ export function SiteHeader() {
                 <span className='sr-only'>Twitter</span>
               </div>
             </Link>
-            <ModeToggle />
+            <SelectTheme />
             <MobileNav />
           </nav>
         </div>
