@@ -7,6 +7,7 @@ import { useState } from 'react';
 import { FiMenu } from 'react-icons/fi';
 import { Icons } from './icons';
 import { Button } from './ui/button';
+import { Separator } from './ui/separator';
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
 
 interface MobileLinkProps extends LinkProps {
@@ -35,7 +36,11 @@ export function MobileNav() {
           <Icons.logo className='mr-2 h-4 w-4' />
           <span className='font-bold'>{siteConfig.name}</span>
         </MobileLink>
+        <Separator className='mt-4' />
         <div className='flex flex-col gap-3 mt-3'>
+          <MobileLink onOpenChange={setOpen} href='/'>
+            Home
+          </MobileLink>
           <MobileLink onOpenChange={setOpen} href='/blog'>
             Blog
           </MobileLink>
@@ -45,6 +50,14 @@ export function MobileNav() {
           <MobileLink onOpenChange={setOpen} href='/about'>
             About
           </MobileLink>
+          <Separator />
+          <Link
+            target='_blank'
+            rel='noreferrer'
+            href={siteConfig.links.linkedin}
+          >
+            LinkedIn
+          </Link>
           <Link target='_blank' rel='noreferrer' href={siteConfig.links.github}>
             Github
           </Link>
