@@ -5,7 +5,6 @@ import Link, { LinkProps } from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import { FiMenu } from 'react-icons/fi';
-import { Icons } from './icons';
 import { Button } from './ui/button';
 import { Separator } from './ui/separator';
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
@@ -33,7 +32,9 @@ export function MobileNav() {
           href='/'
           className='flex items-center'
         >
-          <Icons.logo className='mr-2 h-4 w-4' />
+          <span className='font-bold px-2 py-1 bg-black dark:bg-white text-white dark:text-black tracking-wide mr-2'>
+            AG
+          </span>
           <span className='font-bold'>{siteConfig.name}</span>
         </MobileLink>
         <Separator className='mt-4' />

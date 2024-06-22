@@ -3,6 +3,7 @@ export const siteConfig = {
   url: 'https://antonijogalic.com/',
   description: 'Personal portfolio and blog page',
   author: 'Antonijo Galic',
+  email: 'antonijodev@gmail.com',
   links: {
     linkedin: 'https://www.linkedin.com/in/antonijogalic/',
     github: 'https://github.com/Galiant',

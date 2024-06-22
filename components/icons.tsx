@@ -1,20 +1,6 @@
 type IconProps = React.HTMLAttributes<SVGElement>;
 
 export const Icons = {
-  logo: (props: IconProps) => (
-    <svg
-      xmlns='http://www.w3.org/2000/svg'
-      viewBox='0 0 24 24'
-      fill='none'
-      stroke='currentColor'
-      strokeWidth='2'
-      strokeLinecap='round'
-      strokeLinejoin='round'
-      {...props}
-    >
-      <rect cx='42' cy='42' width='24' height='24' fill='black'></rect>
-    </svg>
-  ),
   twitter: (props: IconProps) => (
     <svg
       {...props}

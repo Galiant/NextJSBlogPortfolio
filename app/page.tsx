@@ -25,7 +25,7 @@ export default function Home() {
               View my blog
             </Link>
             <Link
-              href={siteConfig.links.github}
+              href={`mailto:${siteConfig.email}`}
               target='_blank'
               rel='noreferrer'
               className={cn(
@@ -33,7 +33,7 @@ export default function Home() {
                 'w-full sm:w-fit'
               )}
             >
-              Github
+              Get in touch
             </Link>
           </div>
         </div>

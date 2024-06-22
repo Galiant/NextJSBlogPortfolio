@@ -10,7 +10,7 @@ export function SiteFooter() {
           <a
             target='_blank'
             rel='noreferrer'
-            href='mailto:antonijodev@gmail.com'
+            href={`mailto:${siteConfig.email}`}
           >
             <span className='sr-only'>Mail</span>
             <IoIosMail size={24} />

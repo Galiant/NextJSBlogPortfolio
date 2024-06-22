@@ -4,14 +4,15 @@ import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Icons } from './icons';
 
 export function MainNav() {
   const pathname = usePathname();
   return (
     <nav className='flex items-center space-x-4 lg:space-x-6'>
       <Link href='/' className='mr-6 flex items-center space-x-2'>
-        <Icons.logo className='h-6 w-6' />
+        <span className='font-bold px-2 py-1 bg-black dark:bg-white text-white dark:text-black tracking-wide'>
+          AG
+        </span>
         <span className='font-bold'>{siteConfig.name}</span>
       </Link>
       <Link
