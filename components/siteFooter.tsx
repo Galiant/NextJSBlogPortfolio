@@ -5,8 +5,8 @@ import { IoIosMail } from 'react-icons/io';
 export function SiteFooter() {
   return (
     <footer>
-      <div className='mb-6 mt-14 flex flex-col items-center'>
-        <div className='mb-3 flex space-x-4'>
+      <div className='mb-6 mt-6 flex flex-col items-center'>
+        <div className='mb-6 flex space-x-4'>
           <a
             target='_blank'
             rel='noreferrer'
@@ -28,8 +28,8 @@ export function SiteFooter() {
             <FaXTwitter size={24} />
           </a>
         </div>
-        <div className='mb-2 flex space-x-2 text-sm text-muted-foreground'>
-          {siteConfig.author}
+        <div className='mb-6 flex space-x-2 text-sm text-muted-foreground'>
+          &copy; 2024 {siteConfig.author}. All rights reserved.
         </div>
       </div>
     </footer>
