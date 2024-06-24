@@ -11,7 +11,7 @@ export function Hero() {
           Hello, I&apos;m Antonijo
         </h1>
         <p className='max-w-[42rem] mx-auto text-muted-foreground sm:text-xl text-balance'>
-          Welcome to my corner of the digital world
+          I&apos;m creating fullstack web applications
         </p>
         <div className='flex flex-col gap-4 justify-center sm:flex-row'>
           <Link
