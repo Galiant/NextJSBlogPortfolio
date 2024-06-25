@@ -1,4 +1,5 @@
 import { notes } from '#site/content';
+import { CustomBreadcrumb } from '@/components/breadcrumb';
 import { MDXContent } from '@/components/mdxComponents';
 import { Tag } from '@/components/tag';
 import { siteConfig } from '@/config/site';
@@ -72,6 +73,7 @@ export default async function NotePage({ params }: NotePageProps) {
   }
   return (
     <article className='container py-6 prose dark:prose-invert max-w-3xl mx-auto'>
+      <CustomBreadcrumb postTitle={note.title} parent='Notes' />
       <h1 className='mb-2'>{note.title}</h1>
       {note.description ? (
         <p className='text-xl mt-0 text-muted-foreground'>{note.description}</p>
