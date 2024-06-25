@@ -28,7 +28,7 @@ export function MainNav() {
         href='/blog'
         className={cn(
           'text-sm font-medium transition-colors hover:text-primary hidden sm:inline-block',
-          pathname === '/blog' ? 'text-foreground' : 'text-foreground/60'
+          pathname.includes('/blog') ? 'text-foreground' : 'text-foreground/60'
         )}
       >
         Blog
@@ -37,7 +37,7 @@ export function MainNav() {
         href='/notes'
         className={cn(
           'text-sm font-medium transition-colors hover:text-primary hidden sm:inline-block',
-          pathname === '/notes' ? 'text-foreground' : 'text-foreground/60'
+          pathname.includes('/notes') ? 'text-foreground' : 'text-foreground/60'
         )}
       >
         Notes
