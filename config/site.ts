@@ -10,7 +10,7 @@ export const siteConfig = {
     twitter: 'https://twitter.com/antonijogalic',
   },
   aboutMe:
-    'I’m Antonijo, and I’m thrilled to welcome you to my corner of the digital world. As a devoted husband and father, family is at the heart of everything I do. By day, I work as a fullstack developer at AND Digital in Amsterdam, navigating the intricate landscapes of code to craft innovative solutions. Beyond the lines of code, I’m passionate about continuous learning and exploration, always seeking new ways to expand my knowledge and skills. Join me on this journey as we unravel the mysteries of technology and explore the endless possibilities it offers.',
+    'I’m Antonijo, and I’m thrilled to welcome you to my corner of the digital world. I’m a proud husband and father, so family means everything to me. By day, I’m a fullstack developer at AND Digital in Amsterdam, diving into the world of code to create cool stuff. When I’m not coding, I’m all about learning new things and exploring new ideas. Let’s dive into the tech world together and see what we can discover!',
   workExperience: [
     {
       timeInterval: 'August 2021 → Present',

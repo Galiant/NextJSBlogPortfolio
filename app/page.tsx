@@ -4,7 +4,9 @@ import { PostItem } from '@/components/postItem';
 import { sortPosts } from '@/lib/utils';
 
 export default function Home() {
-  const latestPosts = sortPosts(posts).slice(0, 5);
+  const publishedPosts = posts.filter(post => post.published);
+  const latestPosts = sortPosts(publishedPosts).slice(0, 5);
+
   return (
     <>
       <Hero />

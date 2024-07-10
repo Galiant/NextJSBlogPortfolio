@@ -4,7 +4,7 @@ import { IoIosMail } from 'react-icons/io';
 
 export function SiteFooter() {
   return (
-    <footer>
+    <footer className='mt-12'>
       <div className='mb-6 mt-6 flex flex-col items-center'>
         <div className='mb-6 flex space-x-4'>
           <a
