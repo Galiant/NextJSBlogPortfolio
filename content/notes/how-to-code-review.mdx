@@ -1,0 +1,57 @@
+---
+title: How to code review
+description: Simple code review checklist.
+date: 2024-07-01
+tags: ['code review', 'template']
+published: true
+---
+
+## Requirements
+
+- Have the requirements been met? - Matching Designs, Acceptance Criteria is met
+
+## Maintainability
+
+- Is the code following standards and design patters defined by developers on the project
+- Is the code easy to understand (read)? Could a person with little or no prior experience with the code base understand it?
+- Is the class/method/variable name clear and understandable
+- Which parts of the code are confusing? Why?
+- Is the data flow easily understood?
+- Is there any code commented out or does it have unnecessary logs? Why?
+- Is the code located in the correct file/folder/package?
+- Is the code not repeated (DRY Principle)?
+- Does this change breaks backward compatibility?
+
+## Testing
+
+- The code is testable
+- Are there a sufficient number of automated tests? (At least need to be done unit test, we need to think do we need integration or e2e test)
+- The code is Regression Tested. Any part of the platform which will be affected by the code is tested.
+- Edge cases are tested
+- If you fix bug write test for it
+
+## Performance
+
+- Is there any way to improve the code’s performance?
+- Could any of the code be replaced with built-in functions?
+
+## Design
+
+- Does the code follow design standards and practices? Why not?
+
+## Security
+
+- Have you added any new libraries or external dependencies to the codebase? Have these been authorised by developers?
+- You are not storing any secrets or sensitive code material locally within any commits you’re pushing
+- You are not exposing any sensitive data with logging
+- You are not returning errors to the front-end that give hints as to why the application is erroring
+
+## Best Practices
+
+- Styled Components are not inherited in order to apply additional styling
+- Do not create styled-components with no styling
+- Any redundant styling and styled-components are being removed
+- Follow Single Responsibility Principle
+- Different errors handled and displayed correctly
+- Magic values avoided
+- Minimal nesting is used
