@@ -14,7 +14,7 @@ export function SelectTheme() {
   }, [theme]);
 
   const toggleTheme = () => {
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
     setTheme(newTheme);
     setCurrentTheme(newTheme);
   };
