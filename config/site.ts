@@ -4,6 +4,7 @@ export const siteConfig = {
   description: 'Personal portfolio and blog page',
   author: 'Antonijo Galic',
   email: 'antonijodev@gmail.com',
+  jobTitle: 'Fullstack Developer',
   links: {
     linkedin: 'https://www.linkedin.com/in/antonijogalic/',
     github: 'https://github.com/Galiant',

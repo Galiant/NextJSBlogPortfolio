@@ -72,7 +72,7 @@ export default async function PostPage({ params }: PostPageProps) {
     notFound();
   }
   return (
-    <article className='container py-6 prose dark:prose-invert max-w-3xl mx-auto'>
+    <article className='container py-6 prose prose-lg dark:prose-invert max-w-3xl mx-auto'>
       <CustomBreadcrumb postTitle={post.title} parent='Blog' />
       <h1 className='mb-2'>{post.title}</h1>
       {post.description ? (

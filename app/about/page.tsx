@@ -30,7 +30,7 @@ export default async function AboutPage() {
             {siteConfig.author}
           </h2>
           <p className='text-muted-foreground text-center break-words'>
-            Fullstack Developer
+            {siteConfig.jobTitle}
           </p>
         </div>
         <p className='text-lg pb-4 leading-8'>
