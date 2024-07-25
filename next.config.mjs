@@ -1,11 +1,14 @@
+/* eslint-disable import/no-anonymous-default-export */
 import { build } from 'velite';
 
 /** @type {import('next').NextConfig} */
 export default {
-  // othor next config here...
   webpack: config => {
     config.plugins.push(new VeliteWebpackPlugin());
     return config;
+  },
+  images: {
+    domains: ['images.unsplash.com'],
   },
 };
 
