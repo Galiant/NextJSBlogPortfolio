@@ -10,8 +10,8 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <section className='container max-w-4xl py-6 lg:py-10 flex flex-col space-y-6'>
-        <h2 className='text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-center'>
+      <section className='container max-w-4xl py-10 lg:py-16 flex flex-col space-y-6'>
+        <h2 className='text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-center'>
           Latest Posts
         </h2>
         <ul className='flex flex-col'>
