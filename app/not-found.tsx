@@ -22,13 +22,13 @@ export default function NotFound() {
           <div className='flex items-center mt-6 gap-x-3'>
             <Link
               href='/'
-              className={cn(buttonVariants({ size: 'lg' }), 'w-full sm:w-fit')}
+              className={cn(buttonVariants({ size: 'sm' }), 'w-full sm:w-fit')}
             >
               Home
             </Link>
             <Link
               href='/blog'
-              className={cn(buttonVariants({ size: 'lg' }), 'w-full sm:w-fit')}
+              className={cn(buttonVariants({ size: 'sm' }), 'w-full sm:w-fit')}
             >
               Blog
             </Link>
