@@ -4,13 +4,16 @@ import { useEffect } from 'react';
 
 const ScrollComponent = () => {
   useEffect(() => {
-    const element = document.querySelector('.mouse-element');
+    const element = document.querySelector('.mouse-element') as HTMLElement;
 
     const handleScroll = () => {
-      if (window.scrollY > 0) {
-        element.style.display = 'none';
-      } else {
-        element.style.display = 'block';
+      if (element) {
+        // Check if the element exists
+        if (window.scrollY > 0) {
+          element.style.display = 'none';
+        } else {
+          element.style.display = 'block';
+        }
       }
     };
 
