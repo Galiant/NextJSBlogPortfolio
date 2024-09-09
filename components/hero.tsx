@@ -1,11 +1,12 @@
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
 import Link from 'next/link';
+import ScrollComponent from './scrollComponent';
 import { buttonVariants } from './ui/button';
 
 export function Hero() {
   return (
-    <section className='space-y-6 h-dvh flex'>
+    <section className='space-y-6 h-screen flex'>
       <div className='container flex flex-col gap-4 text-center self-center'>
         <h1 className='text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-balance'>
           Hello, I&apos;m Antonijo
@@ -33,10 +34,7 @@ export function Hero() {
           </Link>
         </div>
       </div>
-      <div className='h-[54px] w-[33px] bg-transparent border-2 border-primary rounded-[25px] absolute top-[40%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center animate-bounce'>
-        <div className='w-[5px] h-[5px] bg-primary rounded-full mt-[4px] animate-bounce'></div>
-        <div className='w-[5px] h-[5px] bg-primary rounded-full mt-[4px] animate-bounce'></div>
-      </div>
+      <ScrollComponent />
     </section>
   );
 }
